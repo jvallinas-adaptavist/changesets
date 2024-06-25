@@ -63,7 +63,8 @@ export default async function version(
     warn("No unreleased changesets found, exiting.");
     return;
   }
-
+  
+  warn(">> Unreleased changesets found.");
   let packages = await getPackages(cwd);
 
   let releasePlan = assembleReleasePlan(
