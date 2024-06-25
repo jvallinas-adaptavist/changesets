@@ -64,6 +64,8 @@ export default async function version(
     return;
   }
 
+  warn(">> Unreleased changesets found.");
+
   let packages = await getPackages(cwd);
 
   let releasePlan = assembleReleasePlan(
